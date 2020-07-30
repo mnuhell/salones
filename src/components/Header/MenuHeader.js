@@ -46,7 +46,7 @@ const Nav = styled.nav`
 
 const MenuHeader = () => {
     return ( 
-        <Router>
+        
             <Nav className="nav navigation">
                 <li>
                     <FontAwesomeIcon className="icon-menu" icon={faStar} />
@@ -54,23 +54,21 @@ const MenuHeader = () => {
                 </li>
                 <li>
                     <FontAwesomeIcon className="icon-menu" icon={faStar} />
-                    <NavLink to="/bodas">Bodas</NavLink>
+                    <NavLink exact to="/bodas">Bodas</NavLink>
                 </li>
                 <li>
                     <FontAwesomeIcon className="icon-menu" icon={faStar} />
-                    <NavLink to="/comuniones">Comuniones</NavLink>
+                    <NavLink exact to="/comuniones">Comuniones</NavLink>
                 </li>
                 <li>
                     <FontAwesomeIcon className="icon-menu" icon={faStar} />
-                    <NavLink to="/categoring">Catering</NavLink>
+                    <NavLink exact to="/categoring">Catering</NavLink>
                 </li>
                 <li>
                     <FontAwesomeIcon className="icon-menu" icon={faStar} />
-                    <NavLink to="/contacto">Contácto</NavLink>
+                    <NavLink exact to="/contacto">Contácto</NavLink>
                 </li>
             </Nav>
-            
-        </Router>
         
      );
 }
