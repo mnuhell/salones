@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from '../Footer/Footer';
-import Content from '../Content';
+import AppRouters from '../routers/AppRouters';
 
 
 const AppContainer = () => {
@@ -10,7 +10,7 @@ const AppContainer = () => {
         <>
             <Header />
             
-                <Content />
+                <AppRouters />
 
             <Footer />
         </>
