@@ -7,9 +7,9 @@ const Wrapper = styled.div`
     display: grid;
     grid-template-columns: 100%;
     justify-items: center;
-    background: #283A55;
     vertical-align: middle;
-    padding: 30px 0px 0 0;
+    padding: 20px 0px 10px 0;
+    position: relative;
 `
 const Header = () => {
     return ( 

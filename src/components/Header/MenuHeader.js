@@ -1,12 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Switch, Route, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import IconsMenu from '../IconsMenu';
 
 const Nav = styled.nav`
         
-        color: #F6CC94;
         text-transform: uppercase;
         font-size: .8rem;
         display: inline-grid;
@@ -14,7 +13,7 @@ const Nav = styled.nav`
         justify-items: center;
         justify-content: center;
         grid-gap: 2rem;
-        margin: 30px 0 10px 0   ;
+        margin: 10px 0 10px 0;
         width: 100%;
 
     li{
@@ -23,20 +22,24 @@ const Nav = styled.nav`
         padding: 15px 0 0 0;
         text-align: center;
         width: 100%;
+        transition: color .4s ease-in-out;
+        a{
+            font-family: 'Thasadith', sans-serif;
+        }
 
         .icon-menu{
             position: absolute;
-            top: 0;
+            top: -5px;
             left: auto;
             right: auto;
             text-align: center;
             width: 100%;
-            font-size: 10px;
-            display: none;
+            font-size: .8rem;
         }
 
-        &:hover.icon-menu{
-            display: block;
+        &:hover {
+            color: #4D6983;
+
         }
     }
 
@@ -44,28 +47,28 @@ const Nav = styled.nav`
 
 
 
-const MenuHeader = () => {
+const MenuHeader = (icon) => {
     return ( 
         
             <Nav className="nav navigation">
                 <li>
-                    <FontAwesomeIcon className="icon-menu" icon={faStar} />
+                    <IconsMenu icon={faStar} />
                     <NavLink to="/">Home</NavLink>
                 </li>
                 <li>
-                    <FontAwesomeIcon className="icon-menu" icon={faStar} />
+                    <IconsMenu icon={faStar} />
                     <NavLink exact to="/bodas">Bodas</NavLink>
                 </li>
                 <li>
-                    <FontAwesomeIcon className="icon-menu" icon={faStar} />
+                <IconsMenu icon={faStar} />
                     <NavLink exact to="/comuniones">Comuniones</NavLink>
                 </li>
                 <li>
-                    <FontAwesomeIcon className="icon-menu" icon={faStar} />
-                    <NavLink exact to="/categoring">Catering</NavLink>
+                <IconsMenu icon={faStar} />
+                    <NavLink exact to="/categoring">Eventos</NavLink>
                 </li>
                 <li>
-                    <FontAwesomeIcon className="icon-menu" icon={faStar} />
+                <IconsMenu icon={faStar} />
                     <NavLink exact to="/contacto">Contácto</NavLink>
                 </li>
             </Nav>
