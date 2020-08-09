@@ -22,6 +22,9 @@ const GlobalStyle = createGlobalStyle`
     .row{
         padding: 0 15px;
     }
+    input:-webkit-autofill {
+        box-shadow: inset 0 0 0px 9999px white;
+}
 `;
 
 export default GlobalStyle;
